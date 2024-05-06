@@ -27,7 +27,23 @@ func logical() {
 
 }
 
+func loop1() {
+	var yourAge int
+	fmt.Println("How old are you?")
+	fmt.Scanf("%v", &yourAge)
+	yearWait:= (16 - yourAge)
+
+	if yourAge >= 18 {
+		fmt.Println("You are old enough to drive")
+	} else if yourAge == 16 || yourAge == 17 {
+		fmt.Println("You can get your drivers permit")
+	} else {
+		fmt.Printf("You have to wait %v years to drive\n", yearWait)
+	}
+
+}
+
+
 func main() {
-	comparison()
-	logical()
+	loop1()
 }
