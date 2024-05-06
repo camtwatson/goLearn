@@ -27,7 +27,7 @@ func logical() {
 
 }
 
-func loop1() {
+func ifStatements() {
 	var yourAge int
 	fmt.Println("How old are you?")
 	fmt.Scanf("%v", &yourAge)
@@ -43,7 +43,7 @@ func loop1() {
 
 }
 
-func loop2(){
+func switchStatements(){
 	var yourScore int
 	fmt.Println("What score did you get on the test?")
 	fmt.Scanf("%v", &yourScore)
@@ -59,12 +59,22 @@ func loop2(){
 			fmt.Println("You got a C on the test!")
 		case yourScore > 59: 
 			fmt.Println("You got a D on the test!")
-		case yourScore >= 0:
+		default:
 			fmt.Println("You got a F on the test!")
 		
 	}
 }
 
+func forLoop(){
+	num4:= 1
+	for num4 < 10{
+		fmt.Println(num4)
+		num4 += 2
+
+	}
+
+}
+
 func main() {
-	loop2()
+	forLoop()
 }
