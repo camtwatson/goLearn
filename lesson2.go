@@ -43,7 +43,28 @@ func loop1() {
 
 }
 
+func loop2(){
+	var yourScore int
+	fmt.Println("What score did you get on the test?")
+	fmt.Scanf("%v", &yourScore)
+
+	switch {
+		case yourScore > 100, yourScore < 0:
+			fmt.Println("Please enter a score 0-100.")
+		case yourScore > 89: 
+			fmt.Println("You got an A on the test!")
+		case yourScore > 79: 
+			fmt.Println("You got a B on the test!")
+		case yourScore > 69: 
+			fmt.Println("You got a C on the test!")
+		case yourScore > 59: 
+			fmt.Println("You got a D on the test!")
+		case yourScore >= 0:
+			fmt.Println("You got a F on the test!")
+		
+	}
+}
 
 func main() {
-	loop1()
+	loop2()
 }
