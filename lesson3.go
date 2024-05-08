@@ -32,8 +32,24 @@ func arrays1(){
 	}
 }
 
+func slice(){
+	fruits := []string{"Apple", "Orange", "Kiwi", "Blueberry"}
+	fmt.Println(fruits)
+	var num [5] int = [5]int{1, 2, 3, 4, 5}
+	sliced := num[1:4]
+	subSlice := sliced[0:2]
+	fmt.Println(sliced)
+	fmt.Println(subSlice)
+	numSlice := make([]int, 5, 10)
+	fmt.Println(numSlice)
+	sliced = append(sliced, 10, 12, 14)
+	fmt.Println(sliced)
+	sliced = append(sliced, subSlice...)
+	fmt.Println(sliced)
+
+}
+
 func main(){
-	arrays()
-	arrays1()
+	slice()
 
 }
