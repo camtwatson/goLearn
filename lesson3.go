@@ -49,7 +49,21 @@ func slice(){
 
 }
 
+func maps(){
+	nbaTeams := map[string]string{"Boston": "Celtics", "New York": "Knicks", "Orlando": "Magic"}
+
+	fmt.Println(nbaTeams)
+	fmt.Println(nbaTeams["Orlando"])
+	nbaTeams["Indiana"] = "Pacers"
+	fmt.Println(nbaTeams)
+
+	for key, value := range nbaTeams {
+		fmt.Println(key, value)
+	}
+
+}
+
 func main(){
-	slice()
+	maps()
 
 }
